@@ -1,0 +1,88 @@
+/*Tipos de letra personalizados*/
+@font-face {
+  font-family: "Barlow-Bold";
+  src: url(./fonts/Barlow/Barlow-Bold.ttf);
+}
+body {
+  background-color: #f3eed9;
+}
+/*reinicio de los espacios de los elementos*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Barra de navegación*/
+.NavBar {
+  width: 100%;
+  height: 10vh;
+  background-color: #ac0010;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fontLogotipe {
+  margin: 15px;
+  font-size: 3rem;
+  color: #fbdc6a;
+  font-family: Barlow-Bold;
+  text-shadow: 2px 2px 4px rgba(3, 3, 3, 0.445);
+}
+.LinksNav li {
+  display: inline-block;
+  list-style: none;
+  margin: 0px 15px 0px 5px;
+}
+.LinksNav li a {
+  text-decoration: none;
+  color: #fafafa;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5rem;
+}
+.LinksNav li a:hover {
+  color: #fffd6a;
+}
+/*imagen de fondo*/
+.BackgroundImage {
+  display: block;
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+/*menu de imágenes*/
+.MenuSeleccion {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  height: 460px;
+}
+.TheLastOfUs {
+  background-image: url(./img/Portadas/TLoU-Parte-2-Portada.png);
+}
+.GodOfWar {
+  background-image: url(./img/Portadas/God-Of-War-Portada.png);
+}
+.Zelda {
+  background-image: url(./img/Portadas/TLoZ-BotW-Portada.png);
+}
+.Mario {
+  background-image: url(./img/Portadas/Mario-Odyssey-Portada.png);
+}
+.ReadDeadRedemption {
+  background-image: url(./img/Portadas/Red-Dead-Redemption-2-Portada.png);
+}
+.OpcionMenu {
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  width: 0px;
+  flex-grow: 1;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+.OpcionMenu:hover {
+  cursor: pointer;
+  width: 45%;
+  opacity: 1;
+  filter: contrast(120%);
+  color: rgb(217, 255, 0);
+}
