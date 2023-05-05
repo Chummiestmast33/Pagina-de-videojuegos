@@ -2,11 +2,13 @@
     "cSpell.ignoreWords": [
         "Gamebilee",
         "Godof",
+        "Imagenes",
         "Logotipe",
         "Seleccion"
     ],
     "livePreview.defaultPreviewPath": "/index.html",
     "cSpell.words": [
-        "GAMEBILEE"
+        "GAMEBILEE",
+        "Opcion"
     ]
 }
