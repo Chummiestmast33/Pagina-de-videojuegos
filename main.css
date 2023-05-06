@@ -3,6 +3,14 @@
   font-family: "Barlow-Bold";
   src: url(./fonts/Barlow/Barlow-Bold.ttf);
 }
+@font-face {
+  font-family: "BrunoAceSC";
+  src: url(./fonts/Bruno_Ace_SC/BrunoAceSC-Regular.ttf);
+}
+@font-face {
+  font-family: "Source-Serif-Pro";
+  src: url(./fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf);
+}
 body {
   background-color: #004b75;
 }
@@ -55,12 +63,12 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.BackgroundImage h2{
+.BackgroundImage h2 {
   text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: BrunoAceSC;
   font-size: 4rem;
   color: #f0f8ff;
-  text-shadow: 3px 3px 7px #7CB0E0;
+  text-shadow: 3px 3px 7px #7cb0e0;
 }
 /*menu de imágenes*/
 .MenuDeImagenes {
@@ -111,8 +119,10 @@ body {
   transition: 1s ease;
   display: flex;
   align-content: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
+  font-family: Barlow-Bold;
 }
 
 .OpcionMenu:hover {
@@ -120,29 +130,35 @@ body {
   width: 45%;
   opacity: 1;
   filter: contrast(120%);
-  color: #d9ff00;
+  color: #fff;
+  text-shadow: 3px 3px 9px #000000;
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: none;
 }
 /*Estilos de las criticas del videojuego*/
-.GameCritic{
+.GameCritic {
   width: 100%;
   display: block;
   margin-top: 50px;
 }
-.GameCritic h2{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.GameCritic h2 {
+  font-family: BrunoAceSC, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 2.5rem;
   color: #f0f8ff;
   text-align: center;
-  text-shadow: 4px 4px 8px #FF6566;
+  text-shadow: 4px 4px 8px #39ff9c;
   margin-bottom: 20px;
 }
-.GameCritic>img{
+.GameCritic > img {
   width: 90%;
   object-fit: cover;
   margin: 0 5% 10px 5%;
 }
 /*etiqueta de calificación*/
-.MetacriticTag{
+.MetacriticTag {
   height: 90px;
   width: 300px;
   display: flex;
@@ -150,17 +166,17 @@ body {
   flex-wrap: nowrap;
   margin: auto;
 }
-.Calificacion{
+.Calificacion {
   background-color: rgb(1, 207, 1);
-  color:#f0f8ff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
+  color: #f0f8ff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 50px;
   min-width: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.infoMeta{
+.infoMeta {
   min-width: 210px;
   display: flex;
   justify-content: space-around;
@@ -169,16 +185,95 @@ body {
   background-color: #e2dfdf;
   border-radius: 0px 10px 10px 0px;
 }
-.infoMeta>img{
+.infoMeta > img {
   height: 40px;
 }
-.infoMeta>ul{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.infoMeta > ul {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
   list-style: none;
   text-align: center;
 }
-.infoMeta>ul>li>a{
+.infoMeta > ul > li > a {
   text-decoration: none;
   color: #000;
-  font-size: 10px;
+}
+/*tabla y informacion*/
+.infoDelJuego {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.infoDelJuego h3 {
+  color: #e2dfdf;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+.infoDelJuego p {
+  color: #e2dfdf;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: Source-Serif-Pro;
+}
+td,
+th {
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #d6002b;
+}
+
+tr:nth-child(odd) {
+  background-color: #990000;
+}
+/*pie de pagina*/
+footer{
+  margin-top: 25px;
+  background-color: #ac0010;
+  height: 250px;
+  max-height: 400px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+footer > div{
+  width: 45%;
+}
+footer img{
+  width: 2rem;
+}
+footer h4{
+  text-align: center;
+  font-size: 2.7rem;
+  color:#fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+footer a{
+  margin-left: auto;
+  margin-right: auto;
+}
+.contenedorInfo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contenedorInfo > a{
+  font-family: Barlow-Bold;
+  text-decoration: none;
+  color:#441f1f;
+  font-size: 1.85rem;
 }
